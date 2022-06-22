@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import {useParams,useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import styled from 'styled-components'
 
 function User() {
@@ -41,12 +41,13 @@ export default User
 
 
 const UserWrapper = styled.div`
-  min-height:100vh;
+  height:100vh;
   background-color:black;
   opacity:0.8;
   display:flex;
   justify-content:center;
   align-items:center;
+  
 `
 
 const UserContent = styled.div`
@@ -60,7 +61,13 @@ const UserContent = styled.div`
   gap:1rem;
   padding:1rem 3rem;
   border-radius:20px;
+  @media (max-width:700px){
+    h1{
+      font-size:1.5rem;
+    }
+    height:100vh;
 
+  }
   p,h1{
     color:white;
   }
@@ -101,6 +108,15 @@ const DescWrapper = styled.div`
   div:nth-child(2){
     border-top:none;
     border-right:none;
+  }
+  @media (max-width:700px){
+    grid-template-columns: 1fr;
+    div:nth-child(1),div:nth-child(2){
+      border-top:none;
+      border-left: none;
+      border-bottom: 1px solid white;
+      border-right: none;
+    }
   }
 
 `

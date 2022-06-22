@@ -54,26 +54,34 @@ export default CarDetails
 
 
 const Wrapper = styled.div`
-  min-height:100vh;
+  height:100vh;
   background-color:black;
   opacity:0.8;
   display:flex;
   justify-content:center;
   align-items:center;
+  @media (max-width:600px){
+    height:100%;
+  }
 `
 
 const CarContent = styled.div`
   border:1px solid rgba(255,255,255,.3);
   background-color:transparent;
   width:80%;
-  height:85vh;
+  height:100%;
   display:flex;
   flex-direction:column;
   align-items:center;
   gap:1rem;
   padding:1rem 3rem;
   border-radius:20px;
-
+  @media (max-width:600px){
+   height:100%;
+   > p{
+    font-size:0.7rem;
+  }
+  }
   p,h1{
     color:white;
   }
@@ -127,6 +135,17 @@ const DescWrapper = styled.div`
   div:nth-child(4){
     border-bottom:none;
     border-right:none;
+  }
+
+  @media (max-width:600px){
+    grid-template-columns: 1fr;
+    div:nth-child(1),div:nth-child(2),div:nth-child(3),div:nth-child(4){
+      border-top:none;
+      border-left: none;
+      border-bottom: 1px solid white;
+      border-right: none;
+    }
+    
   }
 `
 const Backbtn = styled.div`

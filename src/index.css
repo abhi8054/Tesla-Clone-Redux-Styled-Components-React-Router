@@ -1,9 +1,15 @@
+@font-face {
+  font-family:'poppins-regular' ;
+  src: url("/public/Fonts/Poppins-Regular.ttf");
+}
+
+
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
   color:black;
-  font-family:'Rubik','sans-serif';
+  font-family:'poppins-regular';
 }
 
 body {

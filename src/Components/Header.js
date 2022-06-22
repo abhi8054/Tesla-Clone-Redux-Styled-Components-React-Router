@@ -104,6 +104,7 @@ const RightMenu = styled.div`
 `
 const SubMenu = styled.div`
     background-color:white;
+    overflow-Y:auto;
     position:absolute;
     right:0;
     top:0;
@@ -111,8 +112,9 @@ const SubMenu = styled.div`
     width:20%;
     padding:1rem;
     opacity:1;
-    transform:${props => props.status?'translateX(0)':'translateX(100%)'};
+    transform:${props => props.status ? 'translateX(0)':'translateX(100%)'};
     transition:all 0.5s;
+    
     li{
         margin:0.7rem;
         list-style-type:none;
@@ -131,11 +133,11 @@ const SubMenu = styled.div`
         display:block;
         text-decoration:none;
         font-weight:bold;
-        padding:0.4rem 0.5rem;
+        padding:0.2rem 0.5rem;
         width:100%;
     }
     @media (max-width:800px){
-        width:50%;
+        width:60%;
     }
 `
 
@@ -147,7 +149,7 @@ const HiddenMenu = styled.div`
     top:0;
     bottom:0;
     left:0;
-    transform:${props => props.status?'translateX(0)':'translateX(100%)'};
+    transform:${props => props.status ? 'translateX(0)':'translateX(100%)'};
 
 `
 const Closebtn = styled.div`
