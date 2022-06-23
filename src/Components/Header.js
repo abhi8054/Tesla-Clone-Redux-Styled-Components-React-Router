@@ -14,11 +14,11 @@ const [btn,setBtn] = useState(false);
                 <Link to="cardetails/Model 3">Model 3</Link>
                 <Link to="cardetails/Model X">Model X</Link>
                 <Link to="cardetails/Model Y">Model Y</Link>
-                <a href="#">Solar Roof</a>
-                <a href="#">Solar Panels</a>
+                <Link to="/notbuild">Solar Roof</Link>
+                <Link to="/notbuild">Solar Panels</Link>
             </LeftMenu>
             <RightMenu>
-                <a href="#">Shop</a>
+                <Link to="/notbuild">Shop</Link>
                 <Link to="useraccount">Account</Link>
                 <CustomMenuIcon onClick={()=>setBtn(true)} />
             </RightMenu>
@@ -28,21 +28,21 @@ const [btn,setBtn] = useState(false);
                         <CustomCloseIcon onClick={()=>setBtn(false)} />
                     </Closebtn>
                     <li><Link to="useraccount">Account</Link></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Existing Inventory</a></li>
-                    <li><a href="#">Used Inventory</a></li>
-                    <li><a href="#">Semi</a></li>
-                    <li><a href="#">Charging</a></li>
-                    <li><a href="#">Powerwall</a></li>
-                    <li><a href="#">Cybertruck</a></li>
-                    <li><a href="#">Investor Relations</a></li>
-                    <li><a href="#">Roadster</a></li>
-                    <li><a href="#">Commercial Energy</a></li>
-                    <li><a href="#">Test Drive</a></li>
-                    <li><a href="#">Insurance</a></li>
-                    <li><a href="#">Utilities</a></li>
-                    <li><a href="#">Find Us</a></li>
-                    <li><a href="#">Support Us</a></li>
+                    <li><Link to="/notbuild">Shop</Link></li>
+                    <li><Link to="/notbuild">Existing Inventory</Link></li>
+                    <li><Link to="/notbuild">Used Inventory</Link></li>
+                    <li><Link to="/notbuild">Semi</Link></li>
+                    <li><Link to="/notbuild">Charging</Link></li>
+                    <li><Link to="/notbuild">Powerwall</Link></li>
+                    <li><Link to="/notbuild">Cybertruck</Link></li>
+                    <li><Link to="/notbuild">Investor Relations</Link></li>
+                    <li><Link to="/notbuild">Roadster</Link></li>
+                    <li><Link to="/notbuild">Commercial Energy</Link></li>
+                    <li><Link to="/notbuild">Test Drive</Link></li>
+                    <li><Link to="/notbuild">Insurance</Link></li>
+                    <li><Link to="/notbuild">Utilities</Link></li>
+                    <li><Link to="/notbuild">Find Us</Link></li>
+                    <li><Link to="/notbuild">Support Us</Link></li>
                 </SubMenu>   
             </HiddenMenu>
         </Container>

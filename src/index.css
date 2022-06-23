@@ -22,4 +22,12 @@ body {
   50%  {transform: translateY(7px);}
   75%  {transform: translateY(3PX);}
 }
-
+@keyframes error{
+  0%   {transform: translateY(0);}
+  50%  {transform: translateY(7px);}
+  75%  {transform: translateY(3PX);}
+}
+/* @keyframes error404{
+  0%   {transform: translateX(1000px);}
+  100%  {transform: translateY(0);}
+} */
