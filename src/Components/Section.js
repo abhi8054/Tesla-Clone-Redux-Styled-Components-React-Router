@@ -1,8 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
+import { useNavigate } from 'react-router-dom'
 
 function Section(props) {
+
+    const navigate = useNavigate();
+
+    const handelCar = (carname)=>{
+        navigate("/cardetails/"+carname)
+    }
+
   return (
     <Wrap bgImg={props.backimg}>
         <Fade bottom>
@@ -14,7 +22,9 @@ function Section(props) {
         <SectionCont>
             <Fade bottom>
                 <ButtonGroups>
-                    <ButtonLeft>
+                    <ButtonLeft onClick={()=>{
+                        handelCar(props.title)
+                    }}>
                         {props.leftbtn}
                     </ButtonLeft>
                     {props.rightbtn &&

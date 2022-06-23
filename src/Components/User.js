@@ -1,9 +1,17 @@
-import React from 'react'
-import { useSelector } from 'react-redux';
+import React ,{useEffect} from 'react'
+import { useSelector,useDispatch } from 'react-redux';
+import { getUserDetails } from '../Redux/Actions/action';
 import {useNavigate} from "react-router-dom"
 import styled from 'styled-components'
 
 function User() {
+
+  const dispatch = useDispatch();
+  
+  useEffect(()=>{
+    dispatch(getUserDetails())
+  },[])
+
   const userData = useSelector(
     (allState) => (allState.user)
   )
@@ -75,6 +83,17 @@ const UserContent = styled.div`
   p span{
     font-size:1.2rem;
     color:white;
+  }
+  @media screen and (max-width:500px){
+    padding:1rem 2rem;
+    > p{
+        font-size:0.9rem;
+        text-align:center;
+      span{
+        font-size:0.9rem;
+      }
+    }
+
   }
 
 `

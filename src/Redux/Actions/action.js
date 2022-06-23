@@ -1,8 +1,11 @@
-export const addCarAction = () => ({
-    type: 'Add_Car',
-    payload: "Hello Car"
+import { GET_CAR_DETAILS,GET_USER_DETAILS } from "./type"
+
+
+export const getCarDetails = () => ({
+    type: GET_CAR_DETAILS,
+    payload: ""
 })
-export const addUserAction = () => ({
-    type: 'Add_User',
-    payload:"Hello User"
+export const getUserDetails = () => ({
+    type: GET_USER_DETAILS,
+    payload:""
 })

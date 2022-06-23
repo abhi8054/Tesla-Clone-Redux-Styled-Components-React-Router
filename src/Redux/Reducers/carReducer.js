@@ -1,3 +1,5 @@
+import { GET_CAR_DETAILS } from "../Actions/type";
+
 const initialState = [
     {
         "id": 0,
@@ -43,6 +45,8 @@ const initialState = [
 
 const carReducer = (state = initialState, action) => {
   switch (action.type) {
+    case GET_CAR_DETAILS :
+        return state;
   default:
     return state;
   }

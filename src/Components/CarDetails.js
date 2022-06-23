@@ -1,9 +1,15 @@
-import React from 'react'
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react'
+import { useSelector ,useDispatch} from 'react-redux';
+import {getCarDetails} from "../Redux/Actions/action"
 import {useParams,useNavigate} from "react-router-dom"
 import styled from 'styled-components'
 
 function CarDetails() {
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    dispatch(getCarDetails())
+  },[])
 
   const {carname} = useParams();
   var data = useSelector((allState) => (allState.car));
@@ -79,7 +85,7 @@ const CarContent = styled.div`
   @media (max-width:600px){
    height:100%;
    > p{
-    font-size:0.7rem;
+    font-size:1rem;
   }
   }
   p,h1{
@@ -90,7 +96,17 @@ const CarContent = styled.div`
     font-size:1.2rem;
     color:white;
   }
+  @media screen and (max-width:500px){
+    padding:1rem 2rem;
+    > p{
+        font-size:0.9rem;
+        text-align:center;
+      span{
+        font-size:0.9rem;
+      }
+    }
 
+  }
 `
 const CarImg = styled.img`
   width:250px;

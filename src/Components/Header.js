@@ -10,12 +10,12 @@ const [btn,setBtn] = useState(false);
         <Container>
             <Logo src="/Images/logo.svg" />
             <LeftMenu>
-                <Link to="/model-s/Model S">Model S</Link>
-                <Link to="model-3/Model 3">Model 3</Link>
-                <Link to="model-x/Model X">Model X</Link>
-                <Link to="model-y/Model Y">Model Y</Link>
-                <Link to="model-y/Model Y">Solar Roof</Link>
-                <Link to="model-y/Model Y">Solar Panels</Link>
+                <Link to="cardetails/Model S">Model S</Link>
+                <Link to="cardetails/Model 3">Model 3</Link>
+                <Link to="cardetails/Model X">Model X</Link>
+                <Link to="cardetails/Model Y">Model Y</Link>
+                <a href="#">Solar Roof</a>
+                <a href="#">Solar Panels</a>
             </LeftMenu>
             <RightMenu>
                 <a href="#">Shop</a>
@@ -27,6 +27,8 @@ const [btn,setBtn] = useState(false);
                     <Closebtn>
                         <CustomCloseIcon onClick={()=>setBtn(false)} />
                     </Closebtn>
+                    <li><Link to="useraccount">Account</Link></li>
+                    <li><a href="#">Shop</a></li>
                     <li><a href="#">Existing Inventory</a></li>
                     <li><a href="#">Used Inventory</a></li>
                     <li><a href="#">Semi</a></li>
@@ -71,11 +73,12 @@ const LeftMenu = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
+
     a{  
         text-decoration:none;
         text-transform:uppercase;
         font-weight:bold;
-        padding:0.5rem 0.7rem;
+        padding:0.3rem 0.7rem;
     }
 
     a:hover{
@@ -85,6 +88,7 @@ const LeftMenu = styled.div`
     @media (max-width:1190px){
         display:none;
     }
+    
 
 `
 const RightMenu = styled.div`
@@ -95,11 +99,16 @@ const RightMenu = styled.div`
         text-decoration:none;
         text-transform:uppercase;
         font-weight:bold;
-        padding:0.5rem 0.7rem;
+        padding:0.3rem 0.7rem;
     }
     a:hover{
         background-color:rgba(0,0,0,0.1);
         border-radius:20px;
+    }
+    @media (max-width:500px){
+        a:nth-child(1),a:nth-child(2){
+            display:none;
+        }
     }
 `
 const SubMenu = styled.div`
@@ -109,7 +118,7 @@ const SubMenu = styled.div`
     right:0;
     top:0;
     bottom:0;
-    width:20%;
+    width:30%;
     padding:1rem;
     opacity:1;
     transform:${props => props.status ? 'translateX(0)':'translateX(100%)'};
@@ -137,7 +146,10 @@ const SubMenu = styled.div`
         width:100%;
     }
     @media (max-width:800px){
-        width:60%;
+        width:40%;
+    }
+    @media (max-width:700px){
+        width:70%;
     }
 `
 
@@ -168,4 +180,5 @@ const CustomMenuIcon = styled(MenuIcon)`
 `
 const CustomCloseIcon = styled(CloseIcon)`
     cursor:pointer;
+    margin-right:1rem;
 `

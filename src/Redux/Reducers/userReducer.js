@@ -1,3 +1,5 @@
+import { GET_USER_DETAILS } from "../Actions/type";
+
 const initialState =[
     {
       "id":0,
@@ -12,6 +14,8 @@ const initialState =[
 
 const userReducer = (state = initialState, action) => {
     switch (action.type) {
+      case GET_USER_DETAILS:
+        return state;
     default:
       return state;
     }
