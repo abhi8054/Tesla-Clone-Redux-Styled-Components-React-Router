@@ -1,0 +1,33 @@
+@font-face {
+  font-family:'poppins-regular' ;
+  src: url("/public/Fonts/Poppins-Regular.ttf");
+}
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  color:black;
+  font-family:'poppins-regular';
+}
+
+body {
+ width: 100%;
+ overflow-x: hidden;
+}
+
+@keyframes animateimg{
+  0%   {transform: translateY(0);}
+  50%  {transform: translateY(7px);}
+  75%  {transform: translateY(3PX);}
+}
+@keyframes error{
+  0%   {transform: translateY(0);}
+  50%  {transform: translateY(7px);}
+  75%  {transform: translateY(3PX);}
+}
+/* @keyframes error404{
+  0%   {transform: translateX(1000px);}
+  100%  {transform: translateY(0);}
+} */
