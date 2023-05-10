@@ -1,7 +1,5 @@
 import React, { useState } from "react"
 import styled from 'styled-components'
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
 import {Link} from "react-router-dom"
 
 function Header(){
@@ -20,12 +18,12 @@ const [btn,setBtn] = useState(false);
             <RightMenu>
                 <Link to="/notbuild">Shop</Link>
                 <Link to="useraccount">Account</Link>
-                <CustomMenuIcon onClick={()=>setBtn(true)} />
+                <CustomMenuIcon className="fa-solid fa-bars" onClick={()=>setBtn(true)}></CustomMenuIcon>
             </RightMenu>
             <HiddenMenu status={btn}>
                 <SubMenu status={btn}>
                     <Closebtn>
-                        <CustomCloseIcon onClick={()=>setBtn(false)} />
+                        <CustomCloseIcon className="fa-solid fa-xmark" onClick={()=>setBtn(false)} ></CustomCloseIcon>
                     </Closebtn>
                     <li><Link to="useraccount">Account</Link></li>
                     <li><Link to="/notbuild">Shop</Link></li>
@@ -174,11 +172,11 @@ const Closebtn = styled.div`
     }
 `
 
-const CustomMenuIcon = styled(MenuIcon)`
+const CustomMenuIcon = styled.i`
     cursor:pointer;
     margin-left:0.5rem;
 `
-const CustomCloseIcon = styled(CloseIcon)`
+const CustomCloseIcon = styled.i`
     cursor:pointer;
     margin-right:1rem;
 `
